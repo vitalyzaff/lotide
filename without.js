@@ -16,22 +16,14 @@ const assertArraysEqual = function(arr1, arr2) {
 
 
 const without = function(source, remove) {
-  let arr = [];
+  let bool;
   let notPresent = [];
-  for (let i = 0; i < source.length; i++) { 
-    arr[source[i]] = true;
-  }
-  for (let i = 0; i < remove.length; i++) {
-    if (arr[remove[i]]) {
-      delete arr[remove[i]];
-    } else {
-      arr[remove[i]] = true;
+  for (let i = 0; i < source.length; i++) {
+    bool = remove.includes(source[i]);
+    if (bool === false) {
+      notPresent.push(source[i]);
     }
-  }
-  for (let j in arr) {
-    notPresent.push(j);
-  }
-  return console.log(notPresent);
+  } return console.log(notPresent);
 };
 
 
@@ -40,4 +32,9 @@ without([1, 2, 3], [1]);
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]);
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+
+
+
+
+
 
