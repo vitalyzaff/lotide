@@ -6,15 +6,19 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const countLetters = function(string) {
+const noSpaces = function(string) {
   let noSpaces = '';
-  const result = {};
   for (const char of string) {
     if (char !== ' ') {
       noSpaces += char;
     }
-  }
-  for (const char of noSpaces) {
+  } return noSpaces;
+};
+
+
+const countLetters = function(string) {
+  const result = {};
+  for (const char of noSpaces(string)) {
     if (result[char]) {
       result[char] += 1;
     } else {
