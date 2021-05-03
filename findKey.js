@@ -14,6 +14,7 @@ const findKey = function(object, callback) {
   }
 };
 
+module.exports = findKey;
 
 const object1 = findKey({
   "Blue Hill": { stars: 1 },
@@ -25,4 +26,4 @@ const object1 = findKey({
 }, x => x.stars === 2);
 
 
-assertEqual(object1, 'noma');
+// assertEqual(object1, 'noma');

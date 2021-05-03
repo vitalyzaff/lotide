@@ -32,10 +32,9 @@ const map = function(array, callback) {
   return results;
 };
 
+module.exports = map;
 
 
-console.log(map(words, firstChar));
-
-assertArraysEqual(map(words, firstChar), [ 'g', 'c', 't', 'm', 't' ]);
+// assertArraysEqual(map(words, firstChar), [ 'g', 'c', 't', 'm', 't' ]);
 
 

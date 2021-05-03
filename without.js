@@ -26,12 +26,13 @@ const without = function(source, remove) {
   } return console.log(notPresent);
 };
 
+module.exports = without;
 
-without([1, 8, 9,], [9]);
-without([1, 2, 3], [1]);
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]);
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+// without([1, 8, 9,], [9]);
+// without([1, 2, 3], [1]);
+// const words = ["hello", "world", "lighthouse"];
+// without(words, ["lighthouse"]);
+// assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
 
 
